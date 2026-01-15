@@ -50,38 +50,20 @@ async function getCompany(slug: string): Promise<Company | null> {
   return data as Company
 }
 
-// Generate simulated historical data based on current stats
-// In production, this would come from actual multi-year DOL data
-function generateHistoricalData(currentStats: CompanyStats | undefined) {
-  if (!currentStats) return []
+// Get real historical data from company_stats table
+function getHistoricalData(allStats: CompanyStats[]) {
+  if (!allStats || allStats.length === 0) return []
   
-  const currentYear = currentStats.fiscal_year || 2025
-  const baseApplications = currentStats.total_applications || 100
-  const baseApprovalRate = currentStats.approval_rate || 95
+  // Sort by fiscal year ascending
+  const sortedStats = [...allStats].sort((a, b) => a.fiscal_year - b.fiscal_year)
   
-  // Generate 5 years of simulated data with realistic trends
-  const years = []
-  for (let i = 4; i >= 0; i--) {
-    const year = currentYear - i
-    // Add some variance to make it look realistic
-    const variance = 0.8 + Math.random() * 0.4 // 80% to 120%
-    const growthFactor = 1 + (4 - i) * 0.05 // Slight growth over time
-    
-    const applications = Math.round(baseApplications * variance * (1 / growthFactor))
-    const approvalRate = Math.min(100, Math.max(80, baseApprovalRate + (Math.random() - 0.5) * 10))
-    const approved = Math.round(applications * (approvalRate / 100))
-    const denied = applications - approved
-    
-    years.push({
-      year,
-      applications,
-      approved,
-      denied,
-      approvalRate: Math.round(approvalRate * 10) / 10,
-    })
-  }
-  
-  return years
+  return sortedStats.map(stats => ({
+    year: stats.fiscal_year,
+    applications: stats.total_applications,
+    approved: stats.certified_count,
+    denied: stats.denied_count,
+    approvalRate: stats.approval_rate,
+  }))
 }
 
 // Generate salary distribution based on avg/median
@@ -134,9 +116,23 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
     notFound()
   }
   
-  const stats = company.company_stats?.[0]
-  const historicalData = generateHistoricalData(stats)
-  const salaryDistribution = generateSalaryDistribution(stats?.avg_salary || null, stats?.median_salary || null)
+  // Get the most recent year's stats for display
+  const allStats = company.company_stats || []
+  const latestStats = allStats.length > 0 
+    ? allStats.sort((a, b) => b.fiscal_year - a.fiscal_year)[0]
+    : undefined
+  
+  // Get real historical data from all years
+  const historicalData = getHistoricalData(allStats)
+  const salaryDistribution = generateSalaryDistribution(latestStats?.avg_salary || null, latestStats?.median_salary || null)
+  
+  // Calculate year range for display
+  const years = allStats.map(s => s.fiscal_year).sort((a, b) => a - b)
+  const yearRange = years.length > 1 
+    ? `FY${years[0]}-${years[years.length - 1]}`
+    : years.length === 1 
+      ? `FY${years[0]}`
+      : 'N/A'
   
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -192,10 +188,10 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
           
           <div className="flex flex-col items-end gap-2">
             <Badge variant="success" className="text-lg px-4 py-2">
-              {stats?.approval_rate || 0}% Approval Rate
+              {latestStats?.approval_rate || 0}% Approval Rate
             </Badge>
             <span className="text-sm text-muted-foreground">
-              FY{stats?.fiscal_year || 2025} Data
+              {yearRange} • {allStats.length} year{allStats.length !== 1 ? 's' : ''} of data
             </span>
           </div>
         </div>
@@ -211,17 +207,17 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
       <CompanyDetailClient 
         company={{
           name: company.name,
-          stats: stats ? {
-            totalApplications: stats.total_applications,
-            certifiedCount: stats.certified_count,
-            deniedCount: stats.denied_count,
-            withdrawnCount: stats.withdrawn_count,
-            approvalRate: stats.approval_rate,
-            avgSalary: stats.avg_salary,
-            medianSalary: stats.median_salary,
-            fiscalYear: stats.fiscal_year,
-            topJobTitles: stats.top_job_titles || [],
-            topLocations: stats.top_locations || [],
+          stats: latestStats ? {
+            totalApplications: latestStats.total_applications,
+            certifiedCount: latestStats.certified_count,
+            deniedCount: latestStats.denied_count,
+            withdrawnCount: latestStats.withdrawn_count,
+            approvalRate: latestStats.approval_rate,
+            avgSalary: latestStats.avg_salary,
+            medianSalary: latestStats.median_salary,
+            fiscalYear: latestStats.fiscal_year,
+            topJobTitles: latestStats.top_job_titles || [],
+            topLocations: latestStats.top_locations || [],
           } : null,
           historicalData,
           salaryDistribution,
@@ -230,9 +226,8 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
       
       {/* Disclaimer */}
       <p className="mt-8 text-center text-sm text-muted-foreground">
-        Data sourced from the Department of Labor LCA Disclosure Data. 
+        Data sourced from the Department of Labor LCA Disclosure Data (FY2021-2025). 
         Statistics represent Labor Condition Applications (LCAs), not actual visa approvals.
-        Historical trends are estimates based on available data.
       </p>
     </div>
   )

@@ -120,35 +120,20 @@ async function getCompany(slug) {
     }
     return data;
 }
-// Generate simulated historical data based on current stats
-// In production, this would come from actual multi-year DOL data
-function generateHistoricalData(currentStats) {
-    if (!currentStats) return [];
-    const currentYear = currentStats.fiscal_year || 2025;
-    const baseApplications = currentStats.total_applications || 100;
-    const baseApprovalRate = currentStats.approval_rate || 95;
-    // Generate 5 years of simulated data with realistic trends
-    const years = [];
-    for(let i = 4; i >= 0; i--){
-        const year = currentYear - i;
-        // Add some variance to make it look realistic
-        const variance = 0.8 + Math.random() * 0.4 // 80% to 120%
-        ;
-        const growthFactor = 1 + (4 - i) * 0.05 // Slight growth over time
-        ;
-        const applications = Math.round(baseApplications * variance * (1 / growthFactor));
-        const approvalRate = Math.min(100, Math.max(80, baseApprovalRate + (Math.random() - 0.5) * 10));
-        const approved = Math.round(applications * (approvalRate / 100));
-        const denied = applications - approved;
-        years.push({
-            year,
-            applications,
-            approved,
-            denied,
-            approvalRate: Math.round(approvalRate * 10) / 10
-        });
-    }
-    return years;
+// Get real historical data from company_stats table
+function getHistoricalData(allStats) {
+    if (!allStats || allStats.length === 0) return [];
+    // Sort by fiscal year ascending
+    const sortedStats = [
+        ...allStats
+    ].sort((a, b)=>a.fiscal_year - b.fiscal_year);
+    return sortedStats.map((stats)=>({
+            year: stats.fiscal_year,
+            applications: stats.total_applications,
+            approved: stats.certified_count,
+            denied: stats.denied_count,
+            approvalRate: stats.approval_rate
+        }));
 }
 // Generate salary distribution based on avg/median
 function generateSalaryDistribution(avgSalary, medianSalary) {
@@ -224,9 +209,15 @@ async function CompanyPage({ params }) {
     if (!company) {
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["notFound"])();
     }
-    const stats = company.company_stats?.[0];
-    const historicalData = generateHistoricalData(stats);
-    const salaryDistribution = generateSalaryDistribution(stats?.avg_salary || null, stats?.median_salary || null);
+    // Get the most recent year's stats for display
+    const allStats = company.company_stats || [];
+    const latestStats = allStats.length > 0 ? allStats.sort((a, b)=>b.fiscal_year - a.fiscal_year)[0] : undefined;
+    // Get real historical data from all years
+    const historicalData = getHistoricalData(allStats);
+    const salaryDistribution = generateSalaryDistribution(latestStats?.avg_salary || null, latestStats?.median_salary || null);
+    // Calculate year range for display
+    const years = allStats.map((s)=>s.fiscal_year).sort((a, b)=>a - b);
+    const yearRange = years.length > 1 ? `FY${years[0]}-${years[years.length - 1]}` : years.length === 1 ? `FY${years[0]}` : 'N/A';
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8",
         children: [
@@ -238,14 +229,14 @@ async function CompanyPage({ params }) {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                        lineNumber: 148,
+                        lineNumber: 144,
                         columnNumber: 9
                     }, this),
                     "Back to Companies"
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                lineNumber: 144,
+                lineNumber: 140,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -262,7 +253,7 @@ async function CompanyPage({ params }) {
                                         children: company.name.charAt(0)
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                        lineNumber: 156,
+                                        lineNumber: 152,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -272,7 +263,7 @@ async function CompanyPage({ params }) {
                                                 children: company.name
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                                lineNumber: 160,
+                                                lineNumber: 156,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -286,14 +277,14 @@ async function CompanyPage({ params }) {
                                                                 className: "h-3 w-3"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                                                lineNumber: 164,
+                                                                lineNumber: 160,
                                                                 columnNumber: 21
                                                             }, this),
                                                             company.industry
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                                        lineNumber: 163,
+                                                        lineNumber: 159,
                                                         columnNumber: 19
                                                     }, this),
                                                     (company.headquarters_city || company.headquarters_state) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -303,7 +294,7 @@ async function CompanyPage({ params }) {
                                                                 className: "h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                                                lineNumber: 170,
+                                                                lineNumber: 166,
                                                                 columnNumber: 21
                                                             }, this),
                                                             [
@@ -313,7 +304,7 @@ async function CompanyPage({ params }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                                        lineNumber: 169,
+                                                        lineNumber: 165,
                                                         columnNumber: 19
                                                     }, this),
                                                     company.employee_count && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -324,13 +315,13 @@ async function CompanyPage({ params }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                                        lineNumber: 175,
+                                                        lineNumber: 171,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                                lineNumber: 161,
+                                                lineNumber: 157,
                                                 columnNumber: 15
                                             }, this),
                                             company.website && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -343,7 +334,7 @@ async function CompanyPage({ params }) {
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                                        lineNumber: 185,
+                                                        lineNumber: 181,
                                                         columnNumber: 19
                                                     }, this),
                                                     "Visit Website",
@@ -351,25 +342,25 @@ async function CompanyPage({ params }) {
                                                         className: "h-3 w-3"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                                        lineNumber: 187,
+                                                        lineNumber: 183,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                                lineNumber: 179,
+                                                lineNumber: 175,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                        lineNumber: 159,
+                                        lineNumber: 155,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                lineNumber: 155,
+                                lineNumber: 151,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -379,36 +370,39 @@ async function CompanyPage({ params }) {
                                         variant: "success",
                                         className: "text-lg px-4 py-2",
                                         children: [
-                                            stats?.approval_rate || 0,
+                                            latestStats?.approval_rate || 0,
                                             "% Approval Rate"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                        lineNumber: 194,
+                                        lineNumber: 190,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-sm text-muted-foreground",
                                         children: [
-                                            "FY",
-                                            stats?.fiscal_year || 2025,
-                                            " Data"
+                                            yearRange,
+                                            " • ",
+                                            allStats.length,
+                                            " year",
+                                            allStats.length !== 1 ? 's' : '',
+                                            " of data"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                        lineNumber: 197,
+                                        lineNumber: 193,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                                lineNumber: 193,
+                                lineNumber: 189,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                        lineNumber: 154,
+                        lineNumber: 150,
                         columnNumber: 9
                     }, this),
                     company.description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -416,50 +410,50 @@ async function CompanyPage({ params }) {
                         children: company.description
                     }, void 0, false, {
                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                        lineNumber: 204,
+                        lineNumber: 200,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                lineNumber: 153,
+                lineNumber: 149,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$src$2f$app$2f$companies$2f5b$slug$5d2f$company$2d$detail$2d$client$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CompanyDetailClient"], {
                 company: {
                     name: company.name,
-                    stats: stats ? {
-                        totalApplications: stats.total_applications,
-                        certifiedCount: stats.certified_count,
-                        deniedCount: stats.denied_count,
-                        withdrawnCount: stats.withdrawn_count,
-                        approvalRate: stats.approval_rate,
-                        avgSalary: stats.avg_salary,
-                        medianSalary: stats.median_salary,
-                        fiscalYear: stats.fiscal_year,
-                        topJobTitles: stats.top_job_titles || [],
-                        topLocations: stats.top_locations || []
+                    stats: latestStats ? {
+                        totalApplications: latestStats.total_applications,
+                        certifiedCount: latestStats.certified_count,
+                        deniedCount: latestStats.denied_count,
+                        withdrawnCount: latestStats.withdrawn_count,
+                        approvalRate: latestStats.approval_rate,
+                        avgSalary: latestStats.avg_salary,
+                        medianSalary: latestStats.median_salary,
+                        fiscalYear: latestStats.fiscal_year,
+                        topJobTitles: latestStats.top_job_titles || [],
+                        topLocations: latestStats.top_locations || []
                     } : null,
                     historicalData,
                     salaryDistribution
                 }
             }, void 0, false, {
                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                lineNumber: 211,
+                lineNumber: 207,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "mt-8 text-center text-sm text-muted-foreground",
-                children: "Data sourced from the Department of Labor LCA Disclosure Data. Statistics represent Labor Condition Applications (LCAs), not actual visa approvals. Historical trends are estimates based on available data."
+                children: "Data sourced from the Department of Labor LCA Disclosure Data (FY2021-2025). Statistics represent Labor Condition Applications (LCAs), not actual visa approvals."
             }, void 0, false, {
                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-                lineNumber: 232,
+                lineNumber: 228,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/companies/[slug]/page.tsx",
-        lineNumber: 142,
+        lineNumber: 138,
         columnNumber: 5
     }, this);
 }
