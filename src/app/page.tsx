@@ -1,28 +1,87 @@
-'use client'
-
 import Link from 'next/link'
-import { Search, Building2, TrendingUp, Users, ArrowRight, CheckCircle2 } from 'lucide-react'
-import { useState } from 'react'
+import { Building2, TrendingUp, Users, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { Button, Card, CardContent, Badge } from '@/components/ui'
+import { createClient } from '@/lib/supabase/server'
+import { HomeSearch } from './home-search'
 
-// Sample featured companies for the homepage
-const featuredCompanies = [
-  { name: 'Google', approvalRate: 98, totalSponsored: 15420, industry: 'Technology' },
-  { name: 'Microsoft', approvalRate: 97, totalSponsored: 12350, industry: 'Technology' },
-  { name: 'Amazon', approvalRate: 95, totalSponsored: 18200, industry: 'E-commerce' },
-  { name: 'Meta', approvalRate: 96, totalSponsored: 8900, industry: 'Technology' },
-  { name: 'Apple', approvalRate: 99, totalSponsored: 4200, industry: 'Technology' },
-  { name: 'Goldman Sachs', approvalRate: 94, totalSponsored: 3100, industry: 'Finance' },
-]
+async function getTopCompanies() {
+  const supabase = await createClient()
+  
+  const { data, error } = await supabase
+    .from('companies')
+    .select(`
+      id,
+      name,
+      slug,
+      industry,
+      company_stats (
+        total_applications,
+        approval_rate
+      )
+    `)
+    .order('name')
+    .limit(100)
+  
+  if (error) {
+    console.error('Error fetching companies:', error)
+    return []
+  }
 
-const stats = [
-  { label: 'Companies Tracked', value: '500+', icon: Building2 },
-  { label: 'H1B Records', value: '2M+', icon: TrendingUp },
-  { label: 'Community Reports', value: '10K+', icon: Users },
-]
+  type CompanyRow = {
+    id: string
+    name: string
+    slug: string
+    industry: string | null
+    company_stats: Array<{
+      total_applications: number
+      approval_rate: number
+    }>
+  }
+  
+  // Sort by total applications and take top 6
+  return (data as CompanyRow[])
+    .map(company => ({
+      id: company.id,
+      name: company.name,
+      slug: company.slug,
+      industry: company.industry || 'Other',
+      totalSponsored: company.company_stats?.[0]?.total_applications || 0,
+      approvalRate: company.company_stats?.[0]?.approval_rate || 0,
+    }))
+    .sort((a, b) => b.totalSponsored - a.totalSponsored)
+    .slice(0, 6)
+}
 
-export default function Home() {
-  const [searchQuery, setSearchQuery] = useState('')
+async function getStats() {
+  const supabase = await createClient()
+  
+  const { count: companyCount } = await supabase
+    .from('companies')
+    .select('*', { count: 'exact', head: true })
+  
+  const { data: statsData } = await supabase
+    .from('company_stats')
+    .select('total_applications')
+  
+  const totalH1Bs = (statsData as Array<{total_applications: number}> || []).reduce((sum, s) => sum + (s.total_applications || 0), 0)
+  
+  return {
+    companies: companyCount || 0,
+    h1bRecords: totalH1Bs,
+  }
+}
+
+export default async function Home() {
+  const [topCompanies, dbStats] = await Promise.all([
+    getTopCompanies(),
+    getStats(),
+  ])
+
+  const stats = [
+    { label: 'Companies Tracked', value: dbStats.companies.toLocaleString(), icon: Building2 },
+    { label: 'H1B Applications', value: dbStats.h1bRecords.toLocaleString(), icon: TrendingUp },
+    { label: 'Data Year', value: 'FY 2025', icon: Users },
+  ]
 
   return (
     <div className="flex flex-col">
@@ -31,7 +90,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
             <Badge variant="secondary" className="mb-4">
-              Updated with 2024 H1B data
+              Updated with FY2025 Q1 H1B data
             </Badge>
             <h1 className="mx-auto max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               Find Companies That{' '}
@@ -42,32 +101,8 @@ export default function Home() {
               Join thousands of international professionals finding their path to work in the US.
             </p>
 
-            {/* Search Bar */}
-            <div className="mx-auto mt-10 max-w-xl">
-              <form 
-                onSubmit={(e) => {
-                  e.preventDefault()
-                  if (searchQuery.trim()) {
-                    window.location.href = `/companies?search=${encodeURIComponent(searchQuery)}`
-                  }
-                }}
-                className="flex gap-2"
-              >
-                <div className="relative flex-1">
-                  <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-                  <input
-                    type="text"
-                    placeholder="Search companies (e.g., Google, Microsoft)"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="h-12 w-full rounded-lg border border-border bg-background pl-10 pr-4 text-base focus:outline-none focus:ring-2 focus:ring-primary"
-                  />
-                </div>
-                <Button type="submit" size="lg">
-                  Search
-                </Button>
-              </form>
-            </div>
+            {/* Search Bar - Client Component */}
+            <HomeSearch />
 
             {/* Quick Links */}
             <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-sm text-muted-foreground">
@@ -124,8 +159,8 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredCompanies.map((company) => (
-              <Link key={company.name} href={`/companies/${company.name.toLowerCase().replace(/\s+/g, '-')}`}>
+            {topCompanies.map((company) => (
+              <Link key={company.id} href={`/companies/${company.slug}`}>
                 <Card className="h-full transition-shadow hover:shadow-md">
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between">
@@ -233,7 +268,7 @@ export default function Home() {
                   <CheckCircle2 className="h-4 w-4" /> No credit card required
                 </span>
                 <span className="flex items-center gap-1">
-                  <CheckCircle2 className="h-4 w-4" /> Updated weekly
+                  <CheckCircle2 className="h-4 w-4" /> Updated quarterly
                 </span>
               </div>
             </CardContent>
