@@ -1,0 +1,17 @@
+{
+  "totalRecords": 1042871,
+  "uniqueCompanies": 20496,
+  "topCompaniesSelected": 500,
+  "generatedAt": "2026-01-15T02:54:36.645Z",
+  "byIndustry": {
+    "Technology": 125,
+    "Consulting": 24,
+    "Other": 252,
+    "Finance": 39,
+    "Automotive": 10,
+    "Telecommunications": 6,
+    "Healthcare": 35,
+    "E-commerce": 6,
+    "Entertainment": 3
+  }
+}
