@@ -33,10 +33,10 @@ export function Header() {
             Jobs
           </Link>
           <Link 
-            href="/resources" 
+            href="/news" 
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
-            Resources
+            News
           </Link>
         </nav>
 
@@ -91,11 +91,11 @@ export function Header() {
               Jobs
             </Link>
             <Link 
-              href="/resources" 
+              href="/news" 
               className="rounded-md px-3 py-2 text-sm font-medium hover:bg-muted"
               onClick={() => setIsMenuOpen(false)}
             >
-              Resources
+              News
             </Link>
             <hr className="my-2" />
             <Link 
