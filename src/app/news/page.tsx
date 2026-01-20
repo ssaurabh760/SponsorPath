@@ -29,27 +29,16 @@ const newsArticles = [
   },
   {
     id: 3,
-    title: 'Top H-1B Sponsors of 2024: Tech Companies Lead the Way',
-    summary: 'Analysis of the latest DOL data reveals which companies sponsored the most H-1B visas in 2024, with technology and consulting firms dominating the list.',
-    category: 'Analysis',
-    date: '2024-12-05',
-    readTime: '6 min read',
-    source: 'SponsorPath',
-    url: '/companies',
-    internal: true,
-  },
-  {
-    id: 4,
     title: 'Understanding the H-1B to Green Card Process',
     summary: 'A comprehensive guide to transitioning from H-1B status to permanent residency, including PERM labor certification and priority dates.',
     category: 'Guide',
     date: '2024-11-28',
     readTime: '12 min read',
-    source: 'Immigration Experts',
+    source: 'USCIS',
     url: 'https://www.uscis.gov/green-card/green-card-eligibility/green-card-for-employment-based-immigrants',
   },
   {
-    id: 5,
+    id: 4,
     title: 'H-1B Wage Levels Explained: What You Need to Know',
     summary: 'Breaking down the four wage levels for H-1B positions and how they affect your application. Learn how prevailing wages are determined.',
     category: 'Guide',
@@ -59,7 +48,7 @@ const newsArticles = [
     url: 'https://www.dol.gov/agencies/eta/foreign-labor/wages',
   },
   {
-    id: 6,
+    id: 5,
     title: 'Remote Work and H-1B: Location Requirements Update',
     summary: 'New guidance on H-1B compliance for remote workers, including LCA amendments and worksite location requirements in the post-pandemic era.',
     category: 'Policy Update',
@@ -69,18 +58,7 @@ const newsArticles = [
     url: 'https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-1b-specialty-occupations-and-fashion-models',
   },
   {
-    id: 7,
-    title: 'H-1B Lottery Results: Selection Rates and Trends',
-    summary: 'Historical analysis of H-1B lottery selection rates and what they mean for prospective applicants in the upcoming cap season.',
-    category: 'Analysis',
-    date: '2024-11-10',
-    readTime: '5 min read',
-    source: 'SponsorPath',
-    url: '/companies',
-    internal: true,
-  },
-  {
-    id: 8,
+    id: 6,
     title: 'Cap-Exempt H-1B: Universities and Research Institutions',
     summary: 'Learn about H-1B cap exemptions for universities, nonprofit research organizations, and government research institutions.',
     category: 'Guide',
@@ -96,7 +74,6 @@ const categories = [
   { name: 'Policy Update', count: newsArticles.filter(a => a.category === 'Policy Update').length },
   { name: 'Regulation', count: newsArticles.filter(a => a.category === 'Regulation').length },
   { name: 'Guide', count: newsArticles.filter(a => a.category === 'Guide').length },
-  { name: 'Analysis', count: newsArticles.filter(a => a.category === 'Analysis').length },
 ]
 
 const quickLinks = [
@@ -195,8 +172,8 @@ export default function NewsPage() {
               <a
                 key={article.id}
                 href={article.url}
-                target={article.internal ? '_self' : '_blank'}
-                rel={article.internal ? undefined : 'noopener noreferrer'}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group"
               >
                 <Card className="h-full transition-all hover:shadow-md hover:ring-1 hover:ring-primary/20">
@@ -223,7 +200,7 @@ export default function NewsPage() {
                       </div>
                       <span className="flex items-center gap-1">
                         {article.source}
-                        {!article.internal && <ExternalLink className="h-3 w-3" />}
+                        <ExternalLink className="h-3 w-3" />
                       </span>
                     </div>
                   </CardContent>
@@ -244,8 +221,8 @@ export default function NewsPage() {
               <a
                 key={article.id}
                 href={article.url}
-                target={article.internal ? '_self' : '_blank'}
-                rel={article.internal ? undefined : 'noopener noreferrer'}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group block"
               >
                 <Card className="transition-all hover:shadow-md hover:ring-1 hover:ring-primary/20">
@@ -271,7 +248,7 @@ export default function NewsPage() {
                           </span>
                           <span className="flex items-center gap-1">
                             {article.source}
-                            {!article.internal && <ExternalLink className="h-3 w-3" />}
+                            <ExternalLink className="h-3 w-3" />
                           </span>
                         </div>
                       </div>
@@ -333,13 +310,7 @@ export default function NewsPage() {
             <CardContent className="p-4">
               <h3 className="mb-2 font-semibold">Stay Updated</h3>
               <p className="mb-3 text-sm text-muted-foreground">
-                Get H-1B news and policy updates delivered to your inbox.
               </p>
-              <Link href="/auth/signup">
-                <button className="w-full rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">
-                  Create Free Account
-                </button>
-              </Link>
             </CardContent>
           </Card>
         </div>

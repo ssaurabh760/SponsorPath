@@ -18,9 +18,9 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Resources */}
+          {/* Explore */}
           <div>
-            <h3 className="text-sm font-semibold">Resources</h3>
+            <h3 className="text-sm font-semibold">Explore</h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <Link href="/companies" className="text-sm text-muted-foreground hover:text-foreground">
@@ -33,73 +33,61 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/resources/h1b-guide" className="text-sm text-muted-foreground hover:text-foreground">
-                  H1B Guide
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources/opt-guide" className="text-sm text-muted-foreground hover:text-foreground">
-                  OPT Guide
+                <Link href="/news" className="text-sm text-muted-foreground hover:text-foreground">
+                  H1B News
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Resources */}
           <div>
-            <h3 className="text-sm font-semibold">Company</h3>
+            <h3 className="text-sm font-semibold">Resources</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground">
-                  About Us
-                </Link>
+                <a 
+                  href="https://www.uscis.gov/working-in-the-united-states/h-1b-specialty-occupations" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                >
+                  USCIS H-1B Info
+                </a>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground">
-                  Contact
-                </Link>
+                <a 
+                  href="https://www.dol.gov/agencies/eta/foreign-labor" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                >
+                  DOL Foreign Labor
+                </a>
               </li>
               <li>
-                <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground">
-                  Terms of Service
-                </Link>
+                <a 
+                  href="https://egov.uscis.gov/casestatus/landing.do" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                >
+                  Check Case Status
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Community */}
+          {/* Account */}
           <div>
-            <h3 className="text-sm font-semibold">Community</h3>
+            <h3 className="text-sm font-semibold"></h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href="/submit" className="text-sm text-muted-foreground hover:text-foreground">
-                  Share Your Story
+                <Link href="/auth/login" className="text-sm text-muted-foreground hover:text-foreground">
                 </Link>
               </li>
               <li>
-                <a 
-                  href="https://github.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://twitter.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Twitter
-                </a>
+                <Link href="/auth/signup" className="text-sm text-muted-foreground hover:text-foreground">
+                </Link>
               </li>
             </ul>
           </div>

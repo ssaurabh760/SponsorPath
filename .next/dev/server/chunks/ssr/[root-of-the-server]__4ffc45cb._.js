@@ -30,8 +30,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$Sp
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$src$2f$components$2f$ui$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/Desktop/SponsorPath/SponsorPath/src/components/ui/index.ts [app-rsc] (ecmascript) <locals>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/SponsorPath/SponsorPath/src/components/ui/card.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/SponsorPath/SponsorPath/src/components/ui/badge.tsx [app-rsc] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/SponsorPath/SponsorPath/node_modules/next/dist/client/app-dir/link.react-server.js [app-rsc] (ecmascript)");
-;
 ;
 ;
 ;
@@ -62,27 +60,16 @@ const newsArticles = [
     },
     {
         id: 3,
-        title: 'Top H-1B Sponsors of 2024: Tech Companies Lead the Way',
-        summary: 'Analysis of the latest DOL data reveals which companies sponsored the most H-1B visas in 2024, with technology and consulting firms dominating the list.',
-        category: 'Analysis',
-        date: '2024-12-05',
-        readTime: '6 min read',
-        source: 'SponsorPath',
-        url: '/companies',
-        internal: true
-    },
-    {
-        id: 4,
         title: 'Understanding the H-1B to Green Card Process',
         summary: 'A comprehensive guide to transitioning from H-1B status to permanent residency, including PERM labor certification and priority dates.',
         category: 'Guide',
         date: '2024-11-28',
         readTime: '12 min read',
-        source: 'Immigration Experts',
+        source: 'USCIS',
         url: 'https://www.uscis.gov/green-card/green-card-eligibility/green-card-for-employment-based-immigrants'
     },
     {
-        id: 5,
+        id: 4,
         title: 'H-1B Wage Levels Explained: What You Need to Know',
         summary: 'Breaking down the four wage levels for H-1B positions and how they affect your application. Learn how prevailing wages are determined.',
         category: 'Guide',
@@ -92,7 +79,7 @@ const newsArticles = [
         url: 'https://www.dol.gov/agencies/eta/foreign-labor/wages'
     },
     {
-        id: 6,
+        id: 5,
         title: 'Remote Work and H-1B: Location Requirements Update',
         summary: 'New guidance on H-1B compliance for remote workers, including LCA amendments and worksite location requirements in the post-pandemic era.',
         category: 'Policy Update',
@@ -102,18 +89,7 @@ const newsArticles = [
         url: 'https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-1b-specialty-occupations-and-fashion-models'
     },
     {
-        id: 7,
-        title: 'H-1B Lottery Results: Selection Rates and Trends',
-        summary: 'Historical analysis of H-1B lottery selection rates and what they mean for prospective applicants in the upcoming cap season.',
-        category: 'Analysis',
-        date: '2024-11-10',
-        readTime: '5 min read',
-        source: 'SponsorPath',
-        url: '/companies',
-        internal: true
-    },
-    {
-        id: 8,
+        id: 6,
         title: 'Cap-Exempt H-1B: Universities and Research Institutions',
         summary: 'Learn about H-1B cap exemptions for universities, nonprofit research organizations, and government research institutions.',
         category: 'Guide',
@@ -139,10 +115,6 @@ const categories = [
     {
         name: 'Guide',
         count: newsArticles.filter((a)=>a.category === 'Guide').length
-    },
-    {
-        name: 'Analysis',
-        count: newsArticles.filter((a)=>a.category === 'Analysis').length
     }
 ];
 const quickLinks = [
@@ -203,7 +175,7 @@ function NewsPage() {
                                 className: "h-8 w-8 text-primary"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                lineNumber: 156,
+                                lineNumber: 133,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -211,13 +183,13 @@ function NewsPage() {
                                 children: "H-1B News & Updates"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                lineNumber: 157,
+                                lineNumber: 134,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                        lineNumber: 155,
+                        lineNumber: 132,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -225,13 +197,13 @@ function NewsPage() {
                         children: "Stay informed with the latest H-1B visa news, policy changes, and immigration updates"
                     }, void 0, false, {
                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                        lineNumber: 159,
+                        lineNumber: 136,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                lineNumber: 154,
+                lineNumber: 131,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -250,12 +222,12 @@ function NewsPage() {
                                     className: "h-5 w-5 text-primary"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                    lineNumber: 177,
+                                    lineNumber: 154,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                lineNumber: 176,
+                                lineNumber: 153,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -265,7 +237,7 @@ function NewsPage() {
                                         children: link.title
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                        lineNumber: 180,
+                                        lineNumber: 157,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -273,32 +245,32 @@ function NewsPage() {
                                         children: link.description
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                        lineNumber: 181,
+                                        lineNumber: 158,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                lineNumber: 179,
+                                lineNumber: 156,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
                                 className: "ml-auto h-4 w-4 text-muted-foreground"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                lineNumber: 183,
+                                lineNumber: 160,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, link.title, true, {
                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                        lineNumber: 169,
+                        lineNumber: 146,
                         columnNumber: 13
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                lineNumber: 165,
+                lineNumber: 142,
                 columnNumber: 7
             }, this),
             featuredArticles.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -309,15 +281,15 @@ function NewsPage() {
                         children: "Featured"
                     }, void 0, false, {
                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                        lineNumber: 192,
+                        lineNumber: 169,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "grid gap-4 md:grid-cols-2",
                         children: featuredArticles.map((article)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                 href: article.url,
-                                target: article.internal ? '_self' : '_blank',
-                                rel: article.internal ? undefined : 'noopener noreferrer',
+                                target: "_blank",
+                                rel: "noopener noreferrer",
                                 className: "group",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
                                     className: "h-full transition-all hover:shadow-md hover:ring-1 hover:ring-primary/20",
@@ -332,7 +304,7 @@ function NewsPage() {
                                                         children: article.category
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                        lineNumber: 205,
+                                                        lineNumber: 182,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Badge"], {
@@ -340,13 +312,13 @@ function NewsPage() {
                                                         children: "Featured"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                        lineNumber: 208,
+                                                        lineNumber: 185,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                lineNumber: 204,
+                                                lineNumber: 181,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -354,7 +326,7 @@ function NewsPage() {
                                                 children: article.title
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                lineNumber: 210,
+                                                lineNumber: 187,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -362,7 +334,7 @@ function NewsPage() {
                                                 children: article.summary
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                lineNumber: 213,
+                                                lineNumber: 190,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -375,7 +347,7 @@ function NewsPage() {
                                                                 children: formatDate(article.date)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                lineNumber: 218,
+                                                                lineNumber: 195,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -385,70 +357,70 @@ function NewsPage() {
                                                                         className: "h-3 w-3"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                        lineNumber: 220,
+                                                                        lineNumber: 197,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     article.readTime
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                lineNumber: 219,
+                                                                lineNumber: 196,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                        lineNumber: 217,
+                                                        lineNumber: 194,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "flex items-center gap-1",
                                                         children: [
                                                             article.source,
-                                                            !article.internal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
                                                                 className: "h-3 w-3"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                lineNumber: 226,
-                                                                columnNumber: 47
+                                                                lineNumber: 203,
+                                                                columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                        lineNumber: 224,
+                                                        lineNumber: 201,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                lineNumber: 216,
+                                                lineNumber: 193,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                        lineNumber: 203,
+                                        lineNumber: 180,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                    lineNumber: 202,
+                                    lineNumber: 179,
                                     columnNumber: 17
                                 }, this)
                             }, article.id, false, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                lineNumber: 195,
+                                lineNumber: 172,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                        lineNumber: 193,
+                        lineNumber: 170,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                lineNumber: 191,
+                lineNumber: 168,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -462,15 +434,15 @@ function NewsPage() {
                                 children: "Latest Updates"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                lineNumber: 241,
+                                lineNumber: 218,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "space-y-4",
                                 children: regularArticles.map((article)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                         href: article.url,
-                                        target: article.internal ? '_self' : '_blank',
-                                        rel: article.internal ? undefined : 'noopener noreferrer',
+                                        target: "_blank",
+                                        rel: "noopener noreferrer",
                                         className: "group block",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
                                             className: "transition-all hover:shadow-md hover:ring-1 hover:ring-primary/20",
@@ -488,12 +460,12 @@ function NewsPage() {
                                                                     children: article.category
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                    lineNumber: 256,
+                                                                    lineNumber: 233,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                lineNumber: 255,
+                                                                lineNumber: 232,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -501,7 +473,7 @@ function NewsPage() {
                                                                 children: article.title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                lineNumber: 260,
+                                                                lineNumber: 237,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -509,7 +481,7 @@ function NewsPage() {
                                                                 children: article.summary
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                lineNumber: 263,
+                                                                lineNumber: 240,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -519,7 +491,7 @@ function NewsPage() {
                                                                         children: formatDate(article.date)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                        lineNumber: 267,
+                                                                        lineNumber: 244,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -529,74 +501,74 @@ function NewsPage() {
                                                                                 className: "h-3 w-3"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                                lineNumber: 269,
+                                                                                lineNumber: 246,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             article.readTime
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                        lineNumber: 268,
+                                                                        lineNumber: 245,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                         className: "flex items-center gap-1",
                                                                         children: [
                                                                             article.source,
-                                                                            !article.internal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
                                                                                 className: "h-3 w-3"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                                lineNumber: 274,
-                                                                                columnNumber: 51
+                                                                                lineNumber: 251,
+                                                                                columnNumber: 29
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                        lineNumber: 272,
+                                                                        lineNumber: 249,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                                lineNumber: 266,
+                                                                lineNumber: 243,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                        lineNumber: 254,
+                                                        lineNumber: 231,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                    lineNumber: 253,
+                                                    lineNumber: 230,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                lineNumber: 252,
+                                                lineNumber: 229,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                            lineNumber: 251,
+                                            lineNumber: 228,
                                             columnNumber: 17
                                         }, this)
                                     }, article.id, false, {
                                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                        lineNumber: 244,
+                                        lineNumber: 221,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                lineNumber: 242,
+                                lineNumber: 219,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                        lineNumber: 240,
+                        lineNumber: 217,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -611,7 +583,7 @@ function NewsPage() {
                                             children: "Categories"
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                            lineNumber: 291,
+                                            lineNumber: 268,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -623,7 +595,7 @@ function NewsPage() {
                                                             children: category.name
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                            lineNumber: 298,
+                                                            lineNumber: 275,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -631,29 +603,29 @@ function NewsPage() {
                                                             children: category.count
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                            lineNumber: 299,
+                                                            lineNumber: 276,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, category.name, true, {
                                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                    lineNumber: 294,
+                                                    lineNumber: 271,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                            lineNumber: 292,
+                                            lineNumber: 269,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                    lineNumber: 290,
+                                    lineNumber: 267,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                lineNumber: 289,
+                                lineNumber: 266,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -665,7 +637,7 @@ function NewsPage() {
                                             children: "Key H-1B Dates"
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                            lineNumber: 309,
+                                            lineNumber: 286,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -679,7 +651,7 @@ function NewsPage() {
                                                             children: "FY2026 Registration Opens"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                            lineNumber: 312,
+                                                            lineNumber: 289,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -687,13 +659,13 @@ function NewsPage() {
                                                             children: "March 2025"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                            lineNumber: 313,
+                                                            lineNumber: 290,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                    lineNumber: 311,
+                                                    lineNumber: 288,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -704,7 +676,7 @@ function NewsPage() {
                                                             children: "Registration Closes"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                            lineNumber: 316,
+                                                            lineNumber: 293,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -712,13 +684,13 @@ function NewsPage() {
                                                             children: "Late March 2025"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                            lineNumber: 317,
+                                                            lineNumber: 294,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                    lineNumber: 315,
+                                                    lineNumber: 292,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -729,7 +701,7 @@ function NewsPage() {
                                                             children: "Lottery Results"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                            lineNumber: 320,
+                                                            lineNumber: 297,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -737,13 +709,13 @@ function NewsPage() {
                                                             children: "April 2025"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                            lineNumber: 321,
+                                                            lineNumber: 298,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                    lineNumber: 319,
+                                                    lineNumber: 296,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -754,7 +726,7 @@ function NewsPage() {
                                                             children: "FY2026 Start Date"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                            lineNumber: 324,
+                                                            lineNumber: 301,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -762,30 +734,30 @@ function NewsPage() {
                                                             children: "Oct 1, 2025"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                            lineNumber: 325,
+                                                            lineNumber: 302,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                    lineNumber: 323,
+                                                    lineNumber: 300,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                            lineNumber: 310,
+                                            lineNumber: 287,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                    lineNumber: 308,
+                                    lineNumber: 285,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                lineNumber: 307,
+                                lineNumber: 284,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -798,59 +770,43 @@ function NewsPage() {
                                             children: "Stay Updated"
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                            lineNumber: 334,
+                                            lineNumber: 311,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "mb-3 text-sm text-muted-foreground",
-                                            children: "Get H-1B news and policy updates delivered to your inbox."
+                                            className: "mb-3 text-sm text-muted-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                            lineNumber: 335,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                            href: "/auth/signup",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                className: "w-full rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90",
-                                                children: "Create Free Account"
-                                            }, void 0, false, {
-                                                fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                                lineNumber: 339,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                            lineNumber: 338,
+                                            lineNumber: 312,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                    lineNumber: 333,
+                                    lineNumber: 310,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                                lineNumber: 332,
+                                lineNumber: 309,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                        lineNumber: 287,
+                        lineNumber: 264,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-                lineNumber: 238,
+                lineNumber: 215,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/news/page.tsx",
-        lineNumber: 152,
+        lineNumber: 129,
         columnNumber: 5
     }, this);
 }

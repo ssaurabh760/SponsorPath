@@ -301,7 +301,7 @@ function Footer() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                     className: "text-sm font-semibold",
-                                    children: "Resources"
+                                    children: "Explore"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
                                     lineNumber: 23,
@@ -342,9 +342,9 @@ function Footer() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/resources/h1b-guide",
+                                                href: "/news",
                                                 className: "text-sm text-muted-foreground hover:text-foreground",
-                                                children: "H1B Guide"
+                                                children: "H1B News"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
                                                 lineNumber: 36,
@@ -353,21 +353,6 @@ function Footer() {
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
                                             lineNumber: 35,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/resources/opt-guide",
-                                                className: "text-sm text-muted-foreground hover:text-foreground",
-                                                children: "OPT Guide"
-                                            }, void 0, false, {
-                                                fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                                lineNumber: 41,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                            lineNumber: 40,
                                             columnNumber: 15
                                         }, this)
                                     ]
@@ -386,35 +371,39 @@ function Footer() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                     className: "text-sm font-semibold",
-                                    children: "Company"
+                                    children: "Resources"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                    lineNumber: 50,
+                                    lineNumber: 45,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                     className: "mt-4 space-y-2",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/about",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                href: "https://www.uscis.gov/working-in-the-united-states/h-1b-specialty-occupations",
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
                                                 className: "text-sm text-muted-foreground hover:text-foreground",
-                                                children: "About Us"
+                                                children: "USCIS H-1B Info"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                                lineNumber: 53,
+                                                lineNumber: 48,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                            lineNumber: 52,
+                                            lineNumber: 47,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/contact",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                href: "https://www.dol.gov/agencies/eta/foreign-labor",
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
                                                 className: "text-sm text-muted-foreground hover:text-foreground",
-                                                children: "Contact"
+                                                children: "DOL Foreign Labor"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
                                                 lineNumber: 58,
@@ -426,25 +415,12 @@ function Footer() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/privacy",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                href: "https://egov.uscis.gov/casestatus/landing.do",
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
                                                 className: "text-sm text-muted-foreground hover:text-foreground",
-                                                children: "Privacy Policy"
-                                            }, void 0, false, {
-                                                fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                                lineNumber: 63,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                            lineNumber: 62,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/terms",
-                                                className: "text-sm text-muted-foreground hover:text-foreground",
-                                                children: "Terms of Service"
+                                                children: "Check Case Status"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
                                                 lineNumber: 68,
@@ -458,23 +434,22 @@ function Footer() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                    lineNumber: 51,
+                                    lineNumber: 46,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                            lineNumber: 49,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-sm font-semibold",
-                                    children: "Community"
+                                    className: "text-sm font-semibold"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                    lineNumber: 77,
+                                    lineNumber: 82,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -482,26 +457,8 @@ function Footer() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/submit",
-                                                className: "text-sm text-muted-foreground hover:text-foreground",
-                                                children: "Share Your Story"
-                                            }, void 0, false, {
-                                                fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                                lineNumber: 80,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                            lineNumber: 79,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: "https://github.com",
-                                                target: "_blank",
-                                                rel: "noopener noreferrer",
-                                                className: "text-sm text-muted-foreground hover:text-foreground",
-                                                children: "GitHub"
+                                                href: "/auth/login",
+                                                className: "text-sm text-muted-foreground hover:text-foreground"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
                                                 lineNumber: 85,
@@ -513,32 +470,29 @@ function Footer() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: "https://twitter.com",
-                                                target: "_blank",
-                                                rel: "noopener noreferrer",
-                                                className: "text-sm text-muted-foreground hover:text-foreground",
-                                                children: "Twitter"
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/auth/signup",
+                                                className: "text-sm text-muted-foreground hover:text-foreground"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                                lineNumber: 95,
+                                                lineNumber: 89,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                            lineNumber: 94,
+                                            lineNumber: 88,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 83,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                            lineNumber: 76,
+                            lineNumber: 81,
                             columnNumber: 11
                         }, this)
                     ]
@@ -558,12 +512,12 @@ function Footer() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                        lineNumber: 109,
+                        lineNumber: 97,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/components/Footer.tsx",
-                    lineNumber: 108,
+                    lineNumber: 96,
                     columnNumber: 9
                 }, this)
             ]

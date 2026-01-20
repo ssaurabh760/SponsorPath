@@ -722,42 +722,23 @@ async function Home() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "mt-8 flex flex-col gap-4 sm:flex-row",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                            href: "/companies",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
-                                                size: "lg",
-                                                variant: "secondary",
-                                                children: "Browse Companies"
-                                            }, void 0, false, {
-                                                fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
-                                                lineNumber: 253,
-                                                columnNumber: 19
-                                            }, this)
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                        href: "/companies",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
+                                            size: "lg",
+                                            variant: "secondary",
+                                            children: "Browse Companies"
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
-                                            lineNumber: 252,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                            href: "/auth/signup",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
-                                                size: "lg",
-                                                variant: "outline",
-                                                className: "border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10",
-                                                children: "Create Free Account"
-                                            }, void 0, false, {
-                                                fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
-                                                lineNumber: 258,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
-                                            lineNumber: 257,
-                                            columnNumber: 17
+                                            lineNumber: 253,
+                                            columnNumber: 19
                                         }, this)
-                                    ]
-                                }, void 0, true, {
+                                    }, void 0, false, {
+                                        fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
+                                        lineNumber: 252,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
                                     lineNumber: 251,
                                     columnNumber: 15
@@ -772,14 +753,14 @@ async function Home() {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
-                                                    lineNumber: 265,
+                                                    lineNumber: 260,
                                                     columnNumber: 19
                                                 }, this),
                                                 " Free to use"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
-                                            lineNumber: 264,
+                                            lineNumber: 259,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -789,14 +770,14 @@ async function Home() {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
-                                                    lineNumber: 268,
+                                                    lineNumber: 263,
                                                     columnNumber: 19
                                                 }, this),
                                                 " No credit card required"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
-                                            lineNumber: 267,
+                                            lineNumber: 262,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$SponsorPath$2f$SponsorPath$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -806,20 +787,20 @@ async function Home() {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
-                                                    lineNumber: 271,
+                                                    lineNumber: 266,
                                                     columnNumber: 19
                                                 }, this),
                                                 " Updated quarterly"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
-                                            lineNumber: 270,
+                                            lineNumber: 265,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/SponsorPath/SponsorPath/src/app/page.tsx",
-                                    lineNumber: 263,
+                                    lineNumber: 258,
                                     columnNumber: 15
                                 }, this)
                             ]

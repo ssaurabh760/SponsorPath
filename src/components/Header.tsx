@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Search, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
 export function Header() {
@@ -42,20 +42,15 @@ export function Header() {
 
         {/* Desktop Actions */}
         <div className="hidden items-center gap-4 md:flex">
-          <button className="flex h-9 w-9 items-center justify-center rounded-md hover:bg-muted">
-            <Search className="h-5 w-5 text-muted-foreground" />
-          </button>
           <Link
-            href="/login"
+            href="/auth/login"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
-            Log in
           </Link>
           <Link
-            href="/signup"
+            href="/auth/signup"
             className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Sign up
           </Link>
         </div>
 
@@ -99,14 +94,14 @@ export function Header() {
             </Link>
             <hr className="my-2" />
             <Link 
-              href="/login" 
+              href="/auth/login" 
               className="rounded-md px-3 py-2 text-sm font-medium hover:bg-muted"
               onClick={() => setIsMenuOpen(false)}
             >
               Log in
             </Link>
             <Link 
-              href="/signup" 
+              href="/auth/signup" 
               className="rounded-md bg-primary px-3 py-2 text-center text-sm font-medium text-primary-foreground"
               onClick={() => setIsMenuOpen(false)}
             >

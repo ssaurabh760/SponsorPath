@@ -254,11 +254,6 @@ export default async function Home() {
                     Browse Companies
                   </Button>
                 </Link>
-                <Link href="/auth/signup">
-                  <Button size="lg" variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
-                    Create Free Account
-                  </Button>
-                </Link>
               </div>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm opacity-90">
                 <span className="flex items-center gap-1">
