@@ -6,7 +6,7 @@
 
 **Find companies that sponsor H1B visas with real Department of Labor data**
 
-[Live Demo](https://sponsorpath.vercel.app) · [Report Bug](https://github.com/yourusername/sponsorpath/issues) · [Request Feature](https://github.com/yourusername/sponsorpath/issues)
+[Live Demo](https://sponsor-path.vercel.app/) · [Report Bug](https://github.com/ssaurabh760/SponsorPath/issues) · [Request Feature](https://github.com/ssaurabh760/SponsorPath/issues)
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
@@ -107,7 +107,7 @@ Finding H1B sponsors is challenging. Most job seekers rely on outdated lists or 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/sponsorpath.git
+   git clone https://github.com/ssaurabh760/sponsorpath.git
    cd sponsorpath
    ```
 
@@ -321,7 +321,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Saurabh Srivastava**
 
-Project Link: [https://github.com/yourusername/sponsorpath](https://github.com/yourusername/sponsorpath)
+Project Link: [https://github.com/ssaurabh760/SponsorPath](https://github.com/ssaurabh760/SponsorPath)
 
 ---
 
