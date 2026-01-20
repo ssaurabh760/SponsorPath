@@ -1,161 +1,334 @@
 # SponsorPath
 
-Find companies that sponsor H1B visas. Access real DOL data, approval rates, salary information, and community insights.
+<div align="center">
 
-![Next.js](https://img.shields.io/badge/Next.js-16-black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
-![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-green)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-cyan)
+![SponsorPath Logo](https://img.shields.io/badge/SponsorPath-H1B%20Visa%20Sponsor%20Finder-blue?style=for-the-badge)
 
-## Features
+**Find companies that sponsor H1B visas with real Department of Labor data**
 
-- 📊 **Real DOL Data** - Official H1B disclosure data with approval rates and salaries
-- 🏢 **Company Profiles** - Detailed H1B statistics for 500+ companies
-- 💼 **Job Listings** - Open positions at known H1B sponsors
-- 👥 **Community Insights** - Tips and experiences from sponsored workers
-- 🔍 **Smart Filters** - Filter by industry, location, approval rate, and more
+[Live Demo](https://sponsorpath.vercel.app) · [Report Bug](https://github.com/yourusername/sponsorpath/issues) · [Request Feature](https://github.com/yourusername/sponsorpath/issues)
 
-## Tech Stack
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![Supabase](https://img.shields.io/badge/Supabase-Database-3ECF8E?logo=supabase)](https://supabase.com/)
 
-- **Framework**: [Next.js 16](https://nextjs.org/) with App Router
-- **Database**: [Supabase](https://supabase.com/) (PostgreSQL)
-- **Auth**: Supabase Auth (Google, GitHub OAuth)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
-- **Deployment**: [Vercel](https://vercel.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
+</div>
 
-## Getting Started
+---
+
+## 📋 Table of Contents
+
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Database Schema](#database-schema)
+- [Data Processing](#data-processing)
+- [Deployment](#deployment)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## 🎯 About
+
+SponsorPath is a web application that helps international professionals find companies that sponsor H1B visas in the United States. The platform provides:
+
+- **Real DOL Data**: Access official Department of Labor LCA (Labor Condition Application) disclosure data
+- **Company Insights**: View approval rates, salary ranges, top job titles, and work locations
+- **Historical Trends**: Track company sponsorship patterns over multiple years (FY2021-2025)
+- **Smart Search**: Filter companies by industry, state, and sort by various metrics
+
+### Why SponsorPath?
+
+Finding H1B sponsors is challenging. Most job seekers rely on outdated lists or word of mouth. SponsorPath solves this by:
+
+1. Processing millions of DOL records to identify active sponsors
+2. Calculating real approval rates and salary statistics
+3. Presenting data in an easy-to-use, searchable interface
+
+---
+
+## ✨ Features
+
+### 🏢 Company Database
+- Browse 500+ verified H1B sponsor companies
+- View detailed company profiles with statistics
+- Filter by industry (Technology, Finance, Healthcare, etc.)
+- Filter by headquarters state
+- Sort by total applications, approval rate, or salary
+
+### 📊 Company Deep Dive
+- **Overview Tab**: Application status breakdown, key statistics
+- **Trends Tab**: Historical sponsorship trends with interactive charts
+- **Salary Tab**: Salary distribution visualization
+- **Job Titles Tab**: Most common sponsored positions
+- **Locations Tab**: Work location distribution
+
+### 📰 H1B News
+- Curated H1B policy updates and news
+- Links to official USCIS and DOL resources
+- Key dates for H1B cap season
+
+### 🔐 Authentication
+- User registration and login with Supabase Auth
+- Email/password authentication
+- Protected routes for future premium features
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| **Framework** | Next.js 16 (App Router) |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS 4 |
+| **Database** | Supabase (PostgreSQL) |
+| **Authentication** | Supabase Auth |
+| **Charts** | Recharts |
+| **Deployment** | Vercel |
+| **Data Source** | U.S. Department of Labor |
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 20+
+- Node.js 18+ 
 - npm or yarn
-- Supabase account
-- Vercel account (for deployment)
+- Supabase account (free tier works)
 
-### 1. Clone the Repository
+### Installation
 
-```bash
-git clone https://github.com/yourusername/sponsorpath.git
-cd sponsorpath
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/sponsorpath.git
+   cd sponsorpath
+   ```
 
-### 2. Install Dependencies
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-```bash
-npm install
-```
+3. **Set up Supabase**
+   - Create a new project at [supabase.com](https://supabase.com)
+   - Go to SQL Editor and run the schema from `supabase/schema.sql`
+   - Get your project URL and anon key from Settings > API
 
-### 3. Set Up Supabase
+4. **Configure environment variables**
+   ```bash
+   cp .env.example .env.local
+   ```
+   
+   Edit `.env.local`:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
 
-1. Create a new project at [supabase.com](https://supabase.com)
-2. Go to **SQL Editor** and run the schema:
-   - Copy contents of `supabase/schema.sql`
-   - Paste and execute in SQL Editor
-3. Get your API credentials from **Settings > API**
+5. **Seed the database** (see [Data Processing](#data-processing))
 
-### 4. Configure Environment Variables
+6. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-Copy the example environment file:
+7. **Open [http://localhost:3000](http://localhost:3000)**
 
-```bash
-cp .env.local.example .env.local
-```
+---
 
-Update `.env.local` with your Supabase credentials:
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-### 5. Run Development Server
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Project Structure
+## 📁 Project Structure
 
 ```
 sponsorpath/
 ├── src/
-│   ├── app/                 # Next.js App Router pages
-│   │   ├── companies/       # Company listing & detail pages
-│   │   ├── jobs/           # Job listing pages
-│   │   ├── auth/           # Authentication pages
-│   │   ├── layout.tsx      # Root layout
-│   │   └── page.tsx        # Homepage
-│   ├── components/         # React components
-│   │   ├── ui/            # Base UI components (Button, Card, etc.)
-│   │   ├── Header.tsx     # Site header
-│   │   └── Footer.tsx     # Site footer
-│   ├── lib/               # Utility libraries
-│   │   └── supabase/      # Supabase client configuration
-│   └── types/             # TypeScript type definitions
-│       └── database.ts    # Supabase database types
+│   ├── app/                    # Next.js App Router pages
+│   │   ├── page.tsx            # Homepage
+│   │   ├── companies/
+│   │   │   ├── page.tsx        # Companies listing
+│   │   │   └── [slug]/
+│   │   │       ├── page.tsx    # Company detail (server)
+│   │   │       └── company-detail-client.tsx
+│   │   ├── jobs/
+│   │   │   └── page.tsx        # Jobs page
+│   │   ├── news/
+│   │   │   └── page.tsx        # H1B news
+│   │   └── auth/
+│   │       ├── login/
+│   │       ├── signup/
+│   │       └── callback/
+│   ├── components/
+│   │   ├── ui/                 # Reusable UI components
+│   │   ├── charts/             # Recharts components
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   └── lib/
+│       └── supabase/           # Supabase client setup
+├── scripts/
+│   ├── process-h1b-stream.js   # Initial data processing
+│   └── add-h1b-year.js         # Add additional years
 ├── supabase/
-│   └── schema.sql         # Database schema
-├── scripts/               # Data processing scripts
-├── public/                # Static assets
-└── .github/
-    └── workflows/         # GitHub Actions CI/CD
+│   └── schema.sql              # Database schema
+└── public/
 ```
 
-## Database Schema
+---
 
-The database includes the following tables:
+## 🗄 Database Schema
+
+### Core Tables
 
 | Table | Description |
 |-------|-------------|
-| `companies` | Company information (name, industry, location) |
-| `h1b_records` | Individual H1B case records from DOL |
-| `company_stats` | Aggregated statistics per company/year |
-| `jobs` | Job listings from sponsor companies |
-| `users` | User profiles (linked to Supabase Auth) |
-| `saved_jobs` | User bookmarked jobs |
-| `user_submissions` | Community sponsorship reports |
-| `comments` | Company discussion threads |
+| `companies` | Company information (name, slug, industry, HQ state) |
+| `company_stats` | Per-year statistics (applications, approvals, salaries) |
+| `h1b_records` | Raw H1B application records (optional) |
+| `jobs` | Job listings (future feature) |
+| `users` | User profiles |
+| `saved_jobs` | User bookmarks |
+| `user_submissions` | "I got sponsored" stories |
+| `comments` | Company discussions |
 
-## Deployment
+### Key Relationships
+
+```
+companies (1) ──── (many) company_stats
+companies (1) ──── (many) jobs
+users (1) ──── (many) saved_jobs
+users (1) ──── (many) user_submissions
+```
+
+---
+
+## 📊 Data Processing
+
+### Data Source
+
+Data comes from the [Department of Labor's LCA Disclosure Data](https://www.dol.gov/agencies/eta/foreign-labor/performance).
+
+### Processing Steps
+
+1. **Download DOL Excel files**
+   ```
+   LCA_Disclosure_Data_FY2025_Q1.xlsx
+   LCA_Disclosure_Data_FY2024_Q4.xlsx
+   LCA_Disclosure_Data_FY2023_Q4.xlsx
+   etc.
+   ```
+
+2. **Process with streaming script** (handles large 80MB+ files)
+   ```bash
+   # Initial processing
+   node scripts/process-h1b-stream.js ~/Downloads/LCA_Disclosure_Data_FY2025_Q1.xlsx
+   
+   # Add additional years
+   node scripts/add-h1b-year.js ~/Downloads/LCA_Disclosure_Data_FY2024_Q4.xlsx 2024
+   ```
+
+3. **Run generated SQL in Supabase**
+   - Open `scripts/data/seed-companies.sql` or `add-year-XXXX.sql`
+   - Execute in Supabase SQL Editor
+
+### What Gets Processed
+
+- Company name normalization (removes LLC, Inc, Corp suffixes)
+- Application status counts (Certified, Denied, Withdrawn)
+- Approval rate calculation
+- Salary statistics (average, median)
+- Top 5 job titles per company
+- Top 5 work locations per company
+- Industry classification (pattern matching)
+
+---
+
+## 🌐 Deployment
 
 ### Vercel (Recommended)
 
-1. Push your code to GitHub
-2. Import project in [Vercel](https://vercel.com/new)
+1. Push code to GitHub
+2. Import project in [Vercel](https://vercel.com)
 3. Add environment variables:
    - `NEXT_PUBLIC_SUPABASE_URL`
    - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 4. Deploy!
 
-### GitHub Actions CI/CD
+### Environment Variables
 
-The project includes a CI/CD workflow that:
-- Runs linting and type checking on PRs
-- Builds the project
-- Auto-deploys to Vercel on main branch pushes
-
-Required secrets in GitHub:
-- `VERCEL_TOKEN`
-- `VERCEL_ORG_ID`
-- `VERCEL_PROJECT_ID`
-- `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-
-## Data Sources
-
-H1B data is sourced from the [Department of Labor OFLC Performance Data](https://www.dol.gov/agencies/eta/foreign-labor/performance).
-
-## Contributing
-
-Contributions are welcome! Please read our contributing guidelines before submitting PRs.
-
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anonymous key |
 
 ---
 
-Built with ❤️ for the international worker community
+## 📸 Screenshots
+
+### Homepage
+*Search for H1B sponsors with real DOL data*
+
+### Companies List
+*Browse and filter 500+ sponsor companies*
+
+### Company Detail
+*Deep dive into company statistics with interactive charts*
+
+### Historical Trends
+*Track sponsorship trends over multiple years*
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Guidelines
+
+- Use TypeScript for all new code
+- Follow existing code style
+- Write meaningful commit messages
+- Test your changes locally before submitting
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- [U.S. Department of Labor](https://www.dol.gov) for providing public H1B data
+- [USCIS](https://www.uscis.gov) for H1B program information
+- [Supabase](https://supabase.com) for the amazing backend platform
+- [Vercel](https://vercel.com) for seamless deployment
+
+---
+
+## 📬 Contact
+
+**Saurabh Srivastava**
+
+Project Link: [https://github.com/yourusername/sponsorpath](https://github.com/yourusername/sponsorpath)
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if you find it helpful!**
+
+Made with ❤️ for the international professional community
+
+</div>
